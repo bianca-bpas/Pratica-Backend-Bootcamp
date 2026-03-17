@@ -1,4 +1,3 @@
-from typing import List
 from pydantic import BaseModel
 
 class TaskSchema(BaseModel):
@@ -9,4 +8,7 @@ class TaskSchemaDB(TaskSchema):
     id: int
 
 class ListTasksSchema(BaseModel):
-    tarefas: List[TaskSchemaDB]
+    tarefas: list[TaskSchemaDB]
+
+class Message(BaseModel):
+    mensagem: str
